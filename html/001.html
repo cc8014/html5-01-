@@ -10,15 +10,30 @@
 
 
 <body>
-<div id="div01"><img src="../image/img01.png" /></div>
+<div id="div01" onclick="text()"><img src="../image/img01.png" /></div>
 
 <script>
 
-    $('#div01:nth-child(1)').css({
+//    $('#div01:nth-child(1)').css({
+//        '-webkit-transform':'scale(0.5)',
+//        '-webkit-transition-duration':'0.5s'
+//    });
+var text2=false;
+function text(){
+    if(text2){
+        $('#div01:nth-child(1)').css({
         '-webkit-transform':'scale(0.5)',
+        '-webkit-transition-duration':'0.5s' });
+    }else{
+        $('#div01:nth-child(1)').css({
+        '-webkit-transform':'scale(1)',
         '-webkit-transition-duration':'0.5s'
     });
 
+    }
+   text2=!text2;
+
+}
 </script>
 
 </body>
